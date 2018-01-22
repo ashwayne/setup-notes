@@ -43,11 +43,28 @@ cd bin
 
 sudo apt-get install git
 
-config git
+//config git
 git config --global user.name "ashwin"
 git config --global user.email "ashwin@themode.net"
 
 11 install postgres
 
+//Access root by running the following command:
+
+sudo su -
+
+//To install PostgreSQL, as well as the necessary server software, run the following command:
+
+apt-get install postgresql postgresql-contrib
+
+//Configure PostgreSQL to start up upon server boot.
+
+update-rc.d postgresql enable
+
+//Start PostgreSQL.
+
+service postgresql start
+
 12 install redis
 
+sudo apt-get -y install redis-server
