@@ -1,0 +1,53 @@
+Steps to follow in case of system wash out
+
+1 go to softwares&updates in settings and select india in the download from option
+
+2 do an update
+
+sudo apt-get update
+
+3 when everythings fine and updated install pip
+
+install the following first to install pip
+
+sudo apt-get install python-setuptools python2.7-dev build-essential
+//build-essential might throw some error have to update requirements for build essential
+
+4 install pip
+
+sudo easy_install pip
+
+5 install virtual environment wrapper
+
+pip install virtualenvwrapper
+
+6 create a virtual environment
+
+mkvirtualenv 'name'
+
+install required python packages in the virtualenv
+
+7 install chrome 
+
+8 install screen ruler from software center
+
+9 install pycharm 
+
+//enter bin inside the pycharm folder
+cd bin
+
+//run pycharm shell to install the same.
+. pycharm.sh
+
+10 install git 
+
+sudo apt-get install git
+
+config git
+git config --global user.name "ashwin"
+git config --global user.email "ashwin@themode.net"
+
+11 install postgres
+
+12 install redis
+

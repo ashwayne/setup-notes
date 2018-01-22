@@ -1,0 +1,58 @@
+//clone the repository
+
+git clone "http://git.amtex.co/MODETWO/DigitalMediaPlatform.git"
+
+//change branch to git
+
+git checkout -b mode2.0 remotes/origin/mode2.0
+
+//check if theres virtualenvwrapper, or install and create a virtual environment
+
+//enter the environment
+
+source ~/.virtualenvs/modetwoenv/bin/activate
+
+//enter DigitalMediaPlatform/mobilemode/modetwo/ where the file amtex_install_requirements.sh and run it
+
+. amtex_install_requirements.sh
+
+//if the above program runs without a problem all the packages are installed 
+
+//go to the database postgres
+
+sudo su - postgres
+
+//create user first with permission to create db , set password amtex
+
+createuser amtex --interactive -P
+
+//enter psql
+psql
+
+//change role
+set role amtex;
+
+//create db
+create db mobilemode;
+
+//go to base.py in settings and comment the installed apps with ('autocomplete_light', 'collectfast') apps 
+
+and uncommment the next installed apps
+
+//run migration
+
+python manage.py migrate
+
+// change the installed apps back to normal
+
+//createsuperuser 
+
+python manage.py createsuperuser 
+
+//run the script loaddummydata from scripts folder
+
+python manage.py runscript loaddummydata 
+
+// enter the admin and create an object in the table agencyadmin with amtex as fk_user
+
+//go to local.py and change MEDIA_URL to the url in which the project is opened so that media is loaded

@@ -1,0 +1,30 @@
+//////shows the status of the project
+git status
+
+//////adds the changes , . will add all the changes, we can select the changes to be added
+git add .
+
+/////if green on the second change those changes are being added
+git status
+
+/////commits the changes to the master online with a message inserted mentioning the changes
+git commit -m "message related to commit"
+
+/////finally upload the changed code to master code.
+git push origin master
+
+/////commit the changes before pulling from the master otherwise it'll cause conflict. says can't merge.
+git pull -rebase origin master
+
+/////to completely download a full project git clone the following link.
+git clone "http://git.amtex.co/MODETWO/DigitalMediaPlatform.git" //without quotes works, with quotes don't know
+
+///////to switch branch in a repository give the following with the branch name in the end
+git checkout -b mode2.0 remotes/origin/mode2.0
+
+////////to reset local files to latest version 
+/////fetch all files locally first
+git fetch --all
+
+////then replace the current local files with the files fetched online. 
+git reset --hard origin/master

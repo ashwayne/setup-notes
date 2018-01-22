@@ -1,0 +1,3 @@
+//list of installed packages in ubuntu
+
+apt list --installed 
